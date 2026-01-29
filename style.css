@@ -1,0 +1,279 @@
+/* Reset dasar untuk menghilangkan margin dan padding default browser, memastikan konsistensi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mengatur font dasar untuk seluruh halaman menggunakan Poppins yang sudah di-link di HTML */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333; /* Warna teks utama, gelap untuk kontras */
+  background-color: #ffffff; /* Background putih sebagai dominan */
+}
+
+/* Styling untuk header, membuatnya sticky agar navigasi tetap di atas saat scroll */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #ffb6c1; /* Pink muda sebagai background header */
+  z-index: 1000; /* Memastikan header di atas elemen lain */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk efek modern */
+}
+
+/* Styling untuk navigasi, menggunakan flexbox untuk layout horizontal */
+nav {
+  display: flex;
+  justify-content: space-between; /* Logo di kiri, links di kanan */
+  align-items: center;
+  padding: 1rem 2rem; /* Padding untuk ruang di dalam */
+  max-width: 1200px; /* Lebar maksimal untuk responsivitas */
+  margin: 0 auto; /* Pusatkan navigasi */
+}
+
+/* Styling logo, membuatnya menonjol dengan warna dan ukuran */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff; /* Putih untuk kontras dengan pink */
+}
+
+.logo span {
+  color: #ff69b4; /* Pink lebih gelap untuk aksen pada kata "lima" */
+}
+
+/* Styling untuk list navigasi, menghilangkan bullet dan membuat horizontal */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Jarak antar link */
+}
+
+/* Styling link navigasi, dengan efek hover untuk interaktivitas */
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff; /* Putih */
+  font-weight: 400;
+  transition: color 0.3s ease; /* Transisi halus saat hover */
+}
+
+.nav-links a:hover {
+  color: #ff69b4; /* Pink gelap saat hover */
+}
+
+/* Styling untuk section hero, menggunakan background image atau warna solid, dengan overlay */
+.hero-kelompok {
+  background: linear-gradient(135deg, #ffb6c1, #ffffff); /* Gradien pink muda ke putih untuk efek modern */
+  height: 100vh; /* Tinggi penuh viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Overlay untuk hero, memberikan efek transparan di atas background */
+.hero-overlay {
+  background: rgba(255, 255, 255, 0.8); /* Overlay putih semi-transparan */
+  padding: 2rem;
+  border-radius: 10px; /* Sudut melengkung untuk kesan bersih */
+  max-width: 600px; /* Lebar maksimal untuk teks */
+}
+
+/* Styling teks di hero */
+.hero-overlay p:first-child {
+  font-size: 1.2rem;
+  color: #ffb6c1; /* Pink muda */
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: #333; /* Gelap untuk judul */
+}
+
+.hero-overlay p:nth-child(3) {
+  font-size: 1rem;
+  color: #666; /* Abu-abu untuk deskripsi */
+}
+
+/* Styling button di hero */
+.btn-cek {
+  display: inline-block;
+  background-color: #ffb6c1; /* Pink muda */
+  color: #ffffff; /* Putih */
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px; /* Sudut melengkung */
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* Transisi hover */
+}
+
+.btn-cek:hover {
+  background-color: #ff69b4; /* Pink gelap saat hover */
+}
+
+/* Styling umum untuk section, memberikan padding dan max-width untuk responsivitas */
+.section-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Background alternatif untuk section */
+.bg-light {
+  background-color: #f9f9f9; /* Abu-abu sangat muda untuk variasi */
+}
+
+.bg-white {
+  background-color: #ffffff; /* Putih */
+}
+
+/* Styling judul section */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Styling untuk grid anggota kelompok, menggunakan CSS Grid untuk layout kartu sejajar */
+.kelompok-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Kolom responsif, minimal 250px */
+  gap: 2rem; /* Jarak antar kartu */
+}
+
+/* Styling kartu anggota, dengan efek hover untuk interaktivitas */
+.kelompok-card {
+  background-color: #ffffff; /* Putih */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
+  overflow: hidden; /* Memotong gambar yang melampaui */
+  text-decoration: none; /* Menghilangkan underline link */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi hover */
+}
+
+.kelompok-card:hover {
+  transform: translateY(-5px); /* Efek angkat saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
+}
+
+/* Styling gambar di kartu */
+.card-img img {
+  width: 100%;
+  height: 200px; /* Tinggi tetap untuk konsistensi */
+  object-fit: cover; /* Memastikan gambar pas tanpa distorsi */
+}
+
+/* Styling info di kartu */
+.card-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Styling untuk wrapper konten di section laporan */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling container PDF, memberikan tinggi tetap untuk iframe */
+.pdf-container {
+  width: 100%;
+  max-width: 800px; /* Lebar maksimal */
+  height: 600px; /* Tinggi untuk preview PDF */
+  border: 1px solid #ddd; /* Border halus */
+  border-radius: 10px; /* Sudut melengkung */
+  overflow: hidden; /* Memotong konten yang melampaui */
+  margin-bottom: 1rem;
+}
+
+/* Styling deskripsi di laporan */
+.content-desc {
+  text-align: center;
+}
+
+.content-desc p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+/* Styling untuk wrapper video */
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling container video, mirip dengan PDF */
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  height: 450px; /* Tinggi untuk video */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Styling deskripsi video */
+.video-desc p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Styling footer, sederhana dengan background pink muda */
+footer {
+  background-color: #ffb6c1;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Media query untuk responsivitas di layar laptop dan lebih kecil (misalnya tablet) */
+@media (max-width: 1024px) {
+  .hero-overlay h1 {
+    font-size: 2.5rem; /* Kurangi ukuran judul */
+  }
+  .kelompok-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Kolom lebih kecil */
+  }
+  .pdf-container, .video-container {
+    height: 400px; /* Tinggi lebih kecil untuk layar kecil */
+  }
+}
+
+/* Media query untuk mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Navigasi vertikal di mobile */
+    padding: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero-kelompok {
+    height: 80vh; /* Tinggi lebih kecil */
+  }
+  .section-container {
+    padding: 2rem 1rem;
+  }
+  .kelompok-grid {
+    grid-template-columns: 1fr; /* Satu kolom di mobile */
+  }
+}
