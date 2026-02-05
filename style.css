@@ -1,200 +1,200 @@
-/* --- 1. RESET & DASAR --- */
+/* --- 1. RESET & SETTING DASAR --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Memastikan padding tidak merusak ukuran elemen */
+    margin: 0; /* Menghapus jarak bawaan browser */
+    padding: 0; /* Menghapus ruang dalam bawaan browser */
+    box-sizing: border-box; /* Ukuran elemen dihitung termasuk padding & border */
     scroll-behavior: smooth; /* Efek scroll halus saat klik menu navigasi */
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f7f6;
+    font-family: 'Poppins', sans-serif; /* Menggunakan font dari Google Fonts */
+    background-color: #fff5f7; /* Warna latar belakang pink sangat muda */
+    color: #4a4a4a; /* Warna teks abu gelap agar nyaman dibaca */
+    line-height: 1.6; /* Mengatur jarak antar baris teks */
 }
 
 /* --- 2. NAVIGASI --- */
 header {
-    background: #ffffff;
-    padding: 20px 0;
-    position: fixed; /* Navigasi tetap di atas saat scroll */
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Putih transparan */
+    backdrop-filter: blur(10px); /* Efek blur di belakang navigasi (glassmorphism) */
+    position: fixed; /* Navigasi tetap di atas saat layar di-scroll */
+    width: 100%; /* Memenuhi lebar layar */
+    top: 0; /* Menempel di paling atas */
+    z-index: 1000; /* Memastikan navigasi di atas elemen lain */
+    box-shadow: 0 2px 10px rgba(255, 182, 193, 0.2); /* Bayangan pink halus */
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: flex; /* Mengaktifkan mode flexbox */
+    justify-content: space-between; /* Logo di kiri, menu di kanan */
+    align-items: center; /* Menyejajarkan item secara vertikal */
+    max-width: 1200px; /* Lebar maksimal konten navigasi */
+    margin: 0 auto; /* Menengahkan navigasi */
+    padding: 15px 20px; /* Jarak dalam navigasi */
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.5rem; /* Ukuran teks logo */
+    font-weight: 600; /* Ketebalan teks */
+    color: #ff8fa3; /* Warna pink utama */
 }
 
 .logo span {
-    color: #007bff; /* Memberi warna biru pada kata 'lima' */
+    color: #ffb3c1; /* Warna pink lebih muda untuk variasi */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
+    display: flex; /* List menu berjajar ke samping */
+    list-style: none; /* Menghilangkan titik bullet */
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 25px; /* Jarak antar menu */
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #333;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    color: #666; /* Warna menu */
     font-weight: 400;
-    transition: 0.3s; /* Efek transisi saat hover */
+    transition: 0.3s; /* Durasi animasi saat di-hover */
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: #ff8fa3; /* Berubah warna pink saat disentuh kursor */
 }
 
-/* --- 3. HERO SECTION --- */
+/* --- 3. HERO SECTION (BERANDA) --- */
 .hero-kelompok {
-    height: 100vh; /* Memenuhi tinggi layar */
-    background: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
+    height: 100vh; /* Tinggi penuh satu layar */
+    background: linear-gradient(rgba(255, 245, 247, 0.8), rgba(255, 245, 247, 0.8)), 
+                url('https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=2000'); /* Overlay pink halus di atas gambar */
+    background-size: cover; /* Gambar menutupi seluruh area */
+    background-position: center; /* Gambar fokus di tengah */
+    display: flex; /* Flexbox untuk menengahkan konten */
+    align-items: center; 
     justify-content: center;
     text-align: center;
-    color: white;
 }
 
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Gelapkan gambar background agar teks terbaca */
-    padding: 40px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 800px;
-}
-
-.hero-kelompok h1 {
-    font-size: 3.5rem;
+.hero-overlay h1 {
+    font-size: 3.5rem; /* Ukuran judul besar */
+    color: #ff8fa3;
     margin-bottom: 10px;
 }
 
 .btn-cek {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #007bff;
-    color: white;
+    display: inline-block; /* Agar padding dan margin berfungsi baik */
+    padding: 12px 30px; /* Ukuran tombol */
+    background-color: #ff8fa3; /* Warna tombol pink */
+    color: white; /* Warna teks tombol */
     text-decoration: none;
-    border-radius: 50px;
-    transition: 0.3s;
+    border-radius: 50px; /* Membuat sudut tombol sangat bulat */
     font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 143, 163, 0.3); /* Bayangan tombol */
 }
 
 .btn-cek:hover {
-    background: #0056b3;
-    transform: translateY(-3px); /* Efek melayang saat ditekan */
+    background-color: #ff758f; /* Warna pink lebih gelap saat di-hover */
+    transform: translateY(-3px); /* Tombol sedikit naik saat di-hover */
 }
 
-/* --- 4. LAYOUT UMUM --- */
+/* --- 4. SECTION CONTAINER --- */
 .section-container {
-    padding: 100px 20px; /* Jarak antar bagian agar tidak terlalu rapat */
+    padding: 100px 20px; /* Jarak antar bagian website */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px; /* Lebar konten utama */
+    margin: 0 auto; /* Menengahkan konten */
 }
 
 .section-title {
-    text-align: center;
-    font-size: 2.5rem;
+    text-align: center; /* Judul di tengah */
+    font-size: 2rem;
+    color: #ff8fa3;
     margin-bottom: 50px;
     position: relative;
 }
 
-.section-title::after {
+.section-title::after { /* Membuat garis dekorasi di bawah judul */
     content: '';
     width: 60px;
-    height: 4px;
-    background: #007bff;
+    height: 3px;
+    background: #ffb3c1;
     display: block;
     margin: 10px auto;
 }
 
-.bg-light { background-color: #f9f9f9; }
+.bg-light { background-color: #fff5f7; }
 .bg-white { background-color: #ffffff; }
 
-/* --- 5. GRID ANGGOTA (CARD) --- */
+/* --- 5. GRID ANGGOTA (KARTU) --- */
 .kelompok-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Card otomatis sejajar & responsif */
-    gap: 30px; /* Jarak antar card */
+    display: grid; /* Menggunakan sistem Grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kartu otomatis sejajar dan responsif */
+    gap: 25px; /* Jarak antar kartu */
 }
 
 .kelompok-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
+    background: white; /* Latar kartu putih */
+    border-radius: 20px; /* Sudut kartu melengkung */
+    overflow: hidden; /* Gambar tidak keluar dari sudut melengkung */
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.1); /* Bayangan kartu halus */
+    border: 1px solid #ffe5ec; /* Garis tepi pink tipis */
 }
 
 .kelompok-card:hover {
-    transform: scale(1.05); /* Sedikit membesar saat disentuh */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-10px); /* Kartu naik ke atas saat di-hover */
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3);
 }
 
 .card-img img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover; /* Gambar tetap proporsional meski dipotong */
+    width: 100%; /* Lebar gambar penuh */
+    height: 300px; /* Tinggi gambar seragam */
+    object-fit: cover; /* Gambar tidak gepeng, akan terpotong rapi */
 }
 
 .card-info {
-    padding: 20px;
+    padding: 20px; /* Jarak teks di dalam kartu */
     text-align: center;
 }
 
-/* --- 6. MAKALAH & VIDEO (KONTEN MEDIA) --- */
-.content-wrapper {
-    margin-bottom: 30px;
+.card-info h3 {
+    color: #ff8fa3;
+    margin-bottom: 5px;
 }
 
+/* --- 6. MAKALAH & VIDEO --- */
 .pdf-container, .video-container {
     width: 100%;
-    height: 500px;
-    border-radius: 15px;
+    height: 500px; /* Tinggi tampilan dokumen & video */
+    border-radius: 20px;
+    border: 5px solid #fff; /* Bingkai putih */
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.content-desc, .video-desc {
-    text-align: center;
+.content-desc {
     margin-top: 20px;
+    text-align: center;
 }
 
 /* --- 7. FOOTER --- */
 footer {
-    background: #333;
+    background-color: #ff8fa3; /* Warna footer pink */
     color: white;
     text-align: center;
-    padding: 30px 0;
+    padding: 40px 20px;
+    margin-top: 50px;
 }
 
-/* --- 8. RESPONSIVE (TAMPILAN HP) --- */
+/* --- 8. RESPONSIVE (UNTUK HP) --- */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Sederhanakan nav di HP */
-    .hero-kelompok h1 { font-size: 2.5rem; }
-    .pdf-container, .video-container { height: 300px; }
+    .hero-overlay h1 { font-size: 2.5rem; } /* Kecilkan teks di layar kecil */
+    .nav-links { display: none; } /* Sembunyikan menu navigasi di HP agar tidak berantakan */
+    .pdf-container, .video-container { height: 300px; } /* Kecilkan tinggi media di HP */
 }
